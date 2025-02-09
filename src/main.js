@@ -28,12 +28,12 @@ const diceImages = document.querySelectorAll('.dice-img');
 // Tambahkan event listener ke setiap gambar
 diceImages.forEach(img => {
   // Roll awal saat pertama kali load
-  img.src = `/public/dice${rollDice()}.svg`;
+  img.src = `/dice${rollDice()}.svg`;
   
   // Event click untuk roll ulang
   img.addEventListener('click', function() {
     const newNumber = rollDice();
-    this.src = `/public/dice${newNumber}.svg`;
+    this.src = `/dice${newNumber}.svg`;
     
     // Optional: Tambahkan efek animasi
     this.style.transform = 'rotate(360deg)';
