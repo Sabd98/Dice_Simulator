@@ -17,16 +17,16 @@ body {
 
 h1 {
   margin: 30px;
-  font-family: 'Lobster', cursive;
+  font-family: 'Arial Black', cursive;
   text-shadow: 5px 0 #232931;
-  font-size: 8rem;
+  font-size: 5rem;
   
 }
 
 p {
   font-size: 2rem;
   
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Arial Black', cursive;
 }
 
 img {
@@ -39,6 +39,22 @@ footer {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Arial Black', cursive;
 
 }
+
+.restart-btn{
+ background: #ffd000;
+ border:  none ;
+ border-radius: 5rem;
+ font-size: 2rem;
+ font-weight: bold;
+ font-family: 'Arial Black', cursive;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.restart-btn:hover{
+  box-shadow: inset;
+  text-decoration: underline;
+ }
