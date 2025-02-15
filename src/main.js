@@ -74,6 +74,10 @@ function handleDiceClick() {
   // Cek apakah kedua pemain sudah roll
   if (player1Result !== null && player2Result !== null) {
     ShowResult();
+    // Nonaktifkan klik dadu
+    document.querySelectorAll('.dice-img').forEach(img => {
+      img.style.pointerEvents = 'none';
+    });
   } else {
     // Ganti giliran
     currentPlayer = currentPlayer === 1 ? 2 : 1;
@@ -105,39 +109,10 @@ function Restart() {
     // Hapus dan pasang kembali event listeners
     document.querySelectorAll('.dice-img').forEach(img => {
       img.removeEventListener('click', handleDiceClick);
+      img.style.pointerEvents = 'auto';
     });
+ 
     initializeEventListeners();
 }
 document.addEventListener("DOMContentLoaded", InitGame);
-// // Tambahkan event listener ke setiap gambar
-// diceImages.forEach(img => {
-//   // Roll awal saat pertama kali load
-//   img.src = `/dice${rollDice()}.svg`;
 
-//   // Event click untuk roll ulang
-//   img.addEventListener('click', function() {
-//     const newNumber = rollDice();
-//     this.src = `/dice${newNumber}.svg`;
-
-//     // Optional: Tambahkan efek animasi
-//     this.style.transform = 'rotate(360deg)';
-//     this.style.transition = 'transform 0.5s';
-
-//     setTimeout(() => {
-//       this.style.transform = 'rotate(0deg)';
-//     }, 500);
-
-//     // Update status pemenang
-//   const allNumbers = Array.from(diceImages).map(img =>
-//     parseInt(img.src.match(/dice(\d)\.svg/)[1])
-//   );
-
-//   const resultText = allNumbers[0] === allNumbers[1]
-//     ? "Draw!"
-//     : `Winner: Player ${allNumbers[0] > allNumbers[1] ? 1 : 2}`;
-
-//   document.querySelector('h1').textContent = resultText;
-//   });
-// });
-
-// Jalankan game ketika DOM siap
