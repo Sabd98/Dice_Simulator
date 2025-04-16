@@ -13,7 +13,7 @@ let player2Result = null;
 function InitGame() {
   document.querySelector("#app").innerHTML = `
  <div class="container">
-       <h1>Player ${currentPlayer}'s Turn</h1>
+       <h1>Giliran Player ${currentPlayer}</h1>
       <div>
       <div class="dice">
         <p>Player 1</p>
